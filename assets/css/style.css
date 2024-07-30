@@ -14,6 +14,24 @@
     --onyx: #404040;
     --jet: #333333;
     --shadow: #00000026;
+    --gray: #ffffff4d;
+    --grayish: #ffffff2c;
+    --black-gun: #1c2e3e;
+    --black-gunmetal: #223544;
+}
+
+.dark-theme-palate {
+    --black-gunmetal: #0f171d;
+    --black-coral: #b3b9ce;
+    --gunmetal: #4e7997;
+    --gainsboro: #7e7e7e;
+    --cultured: #131313;
+    --black-gun: #0a1016;
+    --shadow: #00000026;
+    --white: #000;
+    --black: #fff;
+    --gray: #ffffff4d;
+    --grayish: #ffffff2c;
 }
 
 * {
@@ -66,7 +84,7 @@ body a { text-decoration: none;}
 .btn-primary {
     background-color: var(--bright-navy-blue);
     border: 2px solid var(--bright-navy-blue);
-    color: var(--cultured);
+    color: #fafafa;
     border-radius: 50px;
     transition: all 300ms ease;
 }
@@ -94,7 +112,7 @@ body a { text-decoration: none;}
 .header-top {
     height: 85px;
     padding: 20px 0;
-    background-color: #000000b6
+    background-color: #000000b6;
 }
 
 .header-top .nav-left {
@@ -136,7 +154,7 @@ body a { text-decoration: none;}
 .header-top .nav-center img { width: 167.05px; }
 
 .header-top .nav-left p {
-    color: var(--cultured);
+    color: #fafafa;
     font-size: 0.9rem
 }
 
@@ -147,7 +165,7 @@ body a { text-decoration: none;}
 
 .header-top .nav-right i {
     font-size: 1.6rem;
-    color: var(--cultured);
+    color: #fafafa;
 }
 
 .header-bottom {
@@ -166,7 +184,7 @@ body a { text-decoration: none;}
 }
 
 .navbar-float {
-    background-color: #fff;
+    background-color: var(--white);
     position: fixed;
     width: 100%;
     top: 0;
@@ -174,7 +192,7 @@ body a { text-decoration: none;}
 
 .navbar .nav-left button {
     background-color: transparent;
-    border: 1px solid #ffffff4d;
+    border: 1px solid var(--gray);
     border-radius: 50%;
     transition: all 300ms ease;
 }
@@ -186,11 +204,11 @@ body a { text-decoration: none;}
     transition: all 300ms ease;
 }
 
-.navbar .nav-left button:hover { background-color: #ffffff2c; }
+.navbar .nav-left button:hover { background-color: var(--grayish); }
 
 .header-bottom .nav-left i {
     font-size: 1rem;
-    color: var(--white);
+    color: #fff;
     padding: 11px 10px 10px 10px;
 }
 
@@ -210,7 +228,7 @@ body a { text-decoration: none;}
 .navbar .nav-center a p {
     font-size: 1.05rem;
     letter-spacing: -0.5px;
-    color: var(--white);
+    color: #fff;
     transition: all 300ms ease;
 }
 
@@ -241,7 +259,7 @@ body a { text-decoration: none;}
     font-size: 2.2rem;
     border: none;
     background-color: transparent;
-    color: var(--white);
+    color: #fff;
 }
 
 .navbar-float .dark-theme {
@@ -254,15 +272,21 @@ body a { text-decoration: none;}
     padding: 120px 15%;
 }
 
+.header-bottom .home-nav {
+    align-items: center;
+    text-align: center;
+    padding: 200px 15% 120px;
+}
+
 .header-bottom .home h1 {
-    color: var(--cultured);
+    color: #fafafa;
     font-size: 4.3rem;
 }
 
 .header-bottom .home p {
     margin-top: 10px;
     margin-bottom: 50px;
-    color: var(--cultured);
+    color: #fafafa;
     padding: 0 140px;
     line-height: 25px;
 }
@@ -271,9 +295,12 @@ body a { text-decoration: none;}
     padding: 0 300px;
 }
 
-.header-bottom .home .div-btn a {
+.header-bottom .home .btn-white {
     font-size: 0.9rem;
     padding: 15px 30px;
+    color: #fafafa;
+    border-color: #fafafa;
+    background-color: transparent;
 }
 
 .search-destination {
@@ -302,18 +329,19 @@ body a { text-decoration: none;}
     border-radius: 50px;
     padding: 0 25px;
     font-size: 0.98rem;
+    background-color: var(--white);
 }
 
 .search-destination .date {
-    color: var(--spanish-gray);
+    color: #999999;
 }
 
 .search-destination input::placeholder{
-    color: var(--spanish-gray);
+    color: #999999;
 }
 
 .search-destination .btn {
-    padding-top: 25px;
+    padding-top: 17px;
 }
 
 .search-destination a {
@@ -361,7 +389,7 @@ body a { text-decoration: none;}
 .popular-destinations .second{background-image: url(/assets/img/popular-2.jpg);}
 .popular-destinations .third{background-image: url(/assets/img/popular-3.jpg);}
 
-.popular-destinations .card-row .card .card-content {
+.popular-destinations .card-content {
     width: 320px;;
     height: 150px;
     border-radius: 20px;
@@ -499,7 +527,6 @@ body a { text-decoration: none;}
 
 .popular-packages .price p { font-size: 2.8rem; }
 
-
 .gallery {
     width: 100%;
 }
@@ -559,7 +586,7 @@ body a { text-decoration: none;}
 }
 
 .footer-top {
-    background-color: var(--gunmetal);
+    background-color: var(--black-gunmetal);
     color: var(--gainsboro);
 }
 
@@ -615,13 +642,15 @@ body a { text-decoration: none;}
 }
 
 .footer-top .colums:nth-child(3) a {
+    color: #fafafa;
+    border-color: #fafafa;
     padding: 12px 125px;
 }
 
 .footer-bottom {
     padding: 20px 0;
-    color: var(--gainsboro);
-    background-color: #1c2e3e;
+    color: #e0e0e0;
+    background-color: var(--black-gun);
 }
 
 .footer-bottom .colums {
@@ -629,11 +658,11 @@ body a { text-decoration: none;}
 }
 
 .footer-bottom a {
-    color: var(--gainsboro);
+    color: #e0e0e0;
     transition: all 300ms ease;
 }
 
-.footer-bottom a:hover {color: var(--white);}
+.footer-bottom a:hover {color: #fff;}
 
 .footer-bottom ul {
     float: right;
@@ -648,6 +677,6 @@ body a { text-decoration: none;}
 }
 
 .footer-bottom ul li:nth-child(2){
-    border-left: 1px solid var(--gainsboro);
-    border-right: 1px solid var(--gainsboro);
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
 }
