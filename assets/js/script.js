@@ -16,10 +16,12 @@ window.addEventListener('scroll', function () {
 });
 
 const darkThemeToggle = document.getElementById('dark-theme-btn');
-const darkThemeIcon = document.getElementById('icon')
 
-darkThemeToggle.addEventListener('click', function(){
-    if(darkThemeIcon.classList.contains('fa-moon')){
+darkThemeToggle.addEventListener('click', function () {
+
+    const darkThemeIcon = document.getElementById('icon')
+
+    if (darkThemeIcon.classList.contains('fa-moon')) {
         darkThemeIcon.classList.add('fa-sun');
         darkThemeIcon.classList.remove('fa-moon');
     } else {
@@ -28,3 +30,38 @@ darkThemeToggle.addEventListener('click', function(){
     }
     document.body.classList.toggle('dark-theme-palate')
 })
+
+const inquireBtn = document.getElementById('inquire').addEventListener('click', datas)
+
+class Offer {
+    constructor(destination, people, checkingDate, checkoutDate,) {
+        this.destination = destination
+        this.people = people
+        this.checkingDate = checkingDate
+        this.checkoutDate = checkoutDate
+        this.#takenDatas()
+    }
+
+    #takenDatas() {
+        console.log(
+            `Destination: ${this.destination}; No. of people: ${this.people}; Checking date: ${this.checkingDate};Checkout date: ${this.checkoutDate};`
+        );
+    }
+}
+
+function datas() {
+    const destinationTaken = document.getElementById('dataDes')
+    const maxPeopleTaken = document.getElementById('dataNum')
+    const checkingDateTaken = document.getElementById('dataDate1')
+    const checkoutDateTaken = document.getElementById('dataDate2')
+
+    if (destinationTaken.value != '' && maxPeopleTaken.value != '' && checkingDateTaken.value != '' && checkoutDateTaken.value != '') {
+        const newFly = new Offer(destinationTaken.value, maxPeopleTaken.value, checkingDateTaken.value, checkoutDateTaken.value)
+        destinationTaken.value = ''
+        maxPeopleTaken.value = ''
+        checkingDateTaken.value = ''
+        checkoutDateTaken.value = ''
+    } else {
+        alert('Please fill all sections')
+    }
+}
